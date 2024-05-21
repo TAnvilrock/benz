@@ -157,13 +157,13 @@
             <input type="radio" name="q20" value="2"> 💚Yes<br>
             <input type="radio" name="q20" value="0"> ❤️No<br>
         </div>
-    </div>
+   </div>
     <button onclick="calculateResult()">Submit</button>
     <h2 id="result"></h2>
 
     <script>
         function calculateResult() {
-            var Backyardgarden = 0, herb = 0, tree = 0, flower = 0;
+            var backyardgarden = 0, herb = 0, tree = 0, flower = 0;
             var questions = document.querySelectorAll('.question');
             questions.forEach(function(question) {
                 var selected = question.querySelector('input[type="radio"]:checked');
@@ -176,7 +176,7 @@
                     else if (type === 'flower') flower += value;
                 }
             });
-            var max = Math.max(kitchen, herb, tree, flower);
+            var max = Math.max(backyardgarden, herb, tree, flower);
             var result = '';
             if (max === backyardgarden) result = 'Backyardgardenพืชสวนครัว🌱';
             else if (max === herb) result = 'Herbพืชสมุนไพร🌿';
